@@ -5,6 +5,34 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:local="clr-namespace:WallSurface.View"
         mc:Ignorable="d"
-        Title="ResponseExit" Height="450" Width="800">
- 
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Title="ResponseExit" Height="150" Width="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#666666">
+            <Label HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Foreground="WhiteSmoke"
+                   FontSize="16">
+                Do you really want to exit?
+            </Label>
+        </Grid>
+        <UniformGrid Grid.Row="1" Rows="0" Columns="2">
+            <Button DockPanel.Dock="Left"
+                    FontSize="16"
+                    Content="Cancel"
+                    Click="BtnCancel_OnClick"
+                    Style="{DynamicResource CancelButtonStyle}" />
+            <Button DockPanel.Dock="Right"
+                    FontSize="16"
+                    Content="Exit"
+                    Click="BtnExit_OnClick"
+                    Style="{DynamicResource SimpleButtonStyle}" />
+        </UniformGrid>
+    </Grid>
 </Window>
