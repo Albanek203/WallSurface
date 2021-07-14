@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -14,7 +15,10 @@ namespace WallSurface.View {
         public MenuWindow() { InitializeComponent(); }
 
 #region Control header buttons
-        private void BtnClose_OnClick(object sender, RoutedEventArgs e) { Application.Current.Shutdown(); }
+        private void BtnClose_OnClick(object sender, RoutedEventArgs e) {
+            if (new ResponseExit().ShowDialog() == false) { return; }
+            Application.Current.Shutdown();
+        }
         private void BtnFullWindow_OnClick(object sender, RoutedEventArgs e) {
             WindowState = WindowState == WindowState.Maximized
                               ? WindowState = WindowState.Normal

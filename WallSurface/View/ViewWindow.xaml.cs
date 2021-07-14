@@ -18,7 +18,10 @@ namespace WallSurface.View {
         }
 
 #region Control header buttons
-        private void BtnClose_OnClick(object sender, RoutedEventArgs e) { Application.Current.Shutdown(); }
+        private void BtnClose_OnClick(object sender, RoutedEventArgs e) {
+            if (new ResponseExit().ShowDialog() == false) { return; }
+            Application.Current.Shutdown();
+        }
         private void BtnFullWindow_OnClick(object sender, RoutedEventArgs e) {
             WindowState = WindowState == WindowState.Maximized
                               ? WindowState = WindowState.Normal
