@@ -5,6 +5,7 @@
              Startup="App_OnStartup">
     <Application.Resources>
         <Style x:Key="SimpleButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="#404040" />
             <Setter Property="Foreground" Value="WhiteSmoke" />
             <Setter Property="HorizontalContentAlignment" Value="Center" />
             <Setter Property="VerticalContentAlignment" Value="Center" />

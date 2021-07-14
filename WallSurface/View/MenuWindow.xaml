@@ -106,10 +106,6 @@
                         Click="OpenFolder_OnClick"
                         Style="{DynamicResource BodySimpleBtnStyle}" />
                 <Button Grid.Row="2" Grid.Column="1"
-                        Content="Scan All PC"
-                        Click="ScanAllPC_OnClick"
-                        Style="{DynamicResource BodySimpleBtnStyle}" />
-                <Button Grid.Row="3" Grid.Column="1"
                         Content="Search By Internet"
                         Click="SearchInternet_OnClick"
                         Style="{DynamicResource BodySimpleBtnStyle}" />

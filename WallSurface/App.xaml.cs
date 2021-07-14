@@ -7,7 +7,7 @@ namespace WallSurface {
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
-    public partial class App : Application {
+    public partial class App {
         public static IServiceProvider ServiceProvider;
         public App() {
             var servicesCollection = new ServiceCollection();
@@ -19,7 +19,7 @@ namespace WallSurface {
         }
         private void App_OnStartup(object sender, StartupEventArgs e) {
             var shadowWindow = new Window {Width = 1, Height = 1, Visibility = Visibility.Hidden};
-            var menuWindow = ServiceProvider.GetService<MenuWindow>();
+            var menuWindow   = ServiceProvider.GetService<MenuWindow>();
             shadowWindow.Show();
             menuWindow?.Show();
         }
